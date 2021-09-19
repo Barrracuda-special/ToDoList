@@ -1,0 +1,14 @@
+<form action="#">
+  <input
+    type="text"
+    name="task"
+    maxlength="50"
+    placeholder="New task..."
+    [(ngModel)]="newTask"
+  >
+  <button
+    class="btn"
+    (click)="addNewTask()"
+  >Add task</button>
+</form>
+
