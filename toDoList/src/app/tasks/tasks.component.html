@@ -1,5 +1,12 @@
-<div class="wrapper">
-  <p>{{newTask.task}}</p>
-  <input type="checkbox">
-  <button (click)="delTasks()">Delete</button>
+<div
+  [class.wrapper]="doneIt"
+  [class.done-wrap]="!doneIt">
+    <p>{{newTask.task}}</p>
+    <input
+      (click)="taskDone()"
+      type="checkbox"
+      >
+    <button
+      (click)="delTasks()"
+    >Delete</button>
 </div>

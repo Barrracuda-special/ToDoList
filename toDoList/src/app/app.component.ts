@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+export interface Task {
+  task: string,
+  id: number
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,9 +13,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ToDoList'
 
-  allTasks = [
-    {task: 'task1'},
-    {task: 'task2'}
+  allTasks: Task[] = [
+    {task: 'Here will be all tasks', id: 1},
+    {task: 'Here will be all tasks2', id: 2},
   ]
 
   addNewTask(task: any) {
@@ -18,6 +23,6 @@ export class AppComponent {
   }
 
   delete($event: any) {
-
+  this.allTasks.shift()
   }
 }

@@ -7,6 +7,16 @@
   display: flex;
   position: relative;
 }
+.done-wrap {
+  opacity: 0.5;
+  margin: 0 auto 15px;
+  width: 700px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: darkorange;
+  display: flex;
+  position: relative;
+}
 p {
   margin: 23px;
   color: aliceblue;

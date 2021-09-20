@@ -6,11 +6,16 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent {
+  doneIt = true
 
   @Input() newTask: any
   @Output() delTask: EventEmitter<any> = new EventEmitter<any>()
 
   delTasks() {
     this.delTask.emit()
+  }
+
+  taskDone() {
+    this.doneIt = !this.doneIt
   }
 }
